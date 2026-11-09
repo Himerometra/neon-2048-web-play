@@ -40,6 +40,8 @@
   }
 
   window.WXWASMSDK = {
+    // The WebGL loader hides the browser's loading bar when startup finishes.
+    WXHideLoadingPage() {},
     WXStorageGetIntSync: (key, fallback) => readNumber(key, fallback),
     WXStorageGetFloatSync: (key, fallback) => readNumber(key, fallback),
     WXStorageGetStringSync: (key, fallback) => read(key) ?? fallback,
